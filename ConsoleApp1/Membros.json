@@ -1,0 +1,20 @@
+[
+  {
+    "IdMem": 1,
+    "NomeMem": "Rafael",
+    "emprestimo": false,
+    "jogoPego": "nenhum"
+  },
+  {
+    "IdMem": 2,
+    "NomeMem": "Rafael2",
+    "emprestimo": false,
+    "jogoPego": "nenhum"
+  },
+  {
+    "IdMem": 3,
+    "NomeMem": "Joao",
+    "emprestimo": false,
+    "jogoPego": "nenhum"
+  }
+]
