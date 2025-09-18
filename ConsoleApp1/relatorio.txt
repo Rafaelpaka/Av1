@@ -1,0 +1,12 @@
+===== RELATÓRIO DE EMPRÉSTIMOS =====
+Gerado em: 18/09/2025 19:23:41
+
+Jogo: Picomon
+Emprestado a: ninguem
+Data de Empréstimo: 18/09/2025
+Data de Devolução: 01/10/2025
+Valor a pagar: R$ 40,00
+-----------------------------------
+
+===================================
+
