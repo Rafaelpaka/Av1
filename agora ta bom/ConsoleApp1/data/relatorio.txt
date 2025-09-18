@@ -1,0 +1,37 @@
+===== RELATÓRIO DE EMPRÉSTIMOS =====
+Gerado em: 18/09/2025 20:15:27
+
+
+===================================
+
+===== RELATÓRIO DE EMPRÉSTIMOS =====
+Gerado em: 18/09/2025 20:40:32
+
+
+===================================
+
+===== RELATÓRIO DE EMPRÉSTIMOS =====
+Gerado em: 18/09/2025 20:41:09
+
+Jogo: Doom
+Emprestado a: souza
+Data Empréstimo: 18/09/2025
+Ainda não foi devolvido.
+Valor a pagar: R$ 10,00
+-----------------------------------
+
+===================================
+
+===== RELATÓRIO DE EMPRÉSTIMOS =====
+Gerado em: 18/09/2025 20:41:42
+
+Jogo: Doom
+Emprestado a: ninguem
+Data Empréstimo: 18/09/2025
+Data Devolução: 18/09/2025
+Forma de Pagamento: Pix
+Valor a pagar: R$ 10,00
+-----------------------------------
+
+===================================
+
