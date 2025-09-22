@@ -1,127 +1,131 @@
-Rafael de Alcantara = 06010477
-Vinicius Schonfelder = 06010595
-Lucas Soares = 06011048
-lohana: 06009900
+# Sistema Ludoteca .NET
 
+## Equipe de Desenvolvimento
+- **Rafael de Alcântara**: 06010477
+- **Vinicius Schonfelder**: 06010595
+- **Lucas Soares**: 06011048
+- **Lohana**: 06009900
 
-Diagrama: https://drive.google.com/file/d/1MUU0Vlw6h7DLvbSXrZoR-zlAHMT5Icm9/view?usp=sharing
+## Diagrama do Sistema
+[Link para o diagrama](https://drive.google.com/file/d/1MUU0Vlw6h7DLvbSXrZoR-zlAHMT5Icm9/view?usp=sharing)
 
-1. Jogo
+---
 
+## 1. Classe Jogo
 Responsável por representar cada jogo da biblioteca.
 
-Propriedades:
+### Propriedades:
+- `Id` (int)
+- `Nome` (string, private set)
+- `Genero` (string, private set)
+- `Ano` (int, private set)
+- `Estado` (bool)
+- `EmprestadoHa` (string)
+- `DataEmprestimo` (DateTime?)
+- `DataDevolucao` (DateTime?)
+- `FormaPagamento` (string)
 
-Id (int)
+### Características:
+- **Validações**: não permite nomes ou anos inválidos
+- **Construtor**: encapsulamento aplicado
 
-Nome (string, private set)
+---
 
-Genero (string, private set)
-
-Ano (int, private set)
-
-Estado (bool)
-
-EmprestadoHa (string)
-
-DataEmprestimo (DateTime?)
-
-DataDevolucao (DateTime?)
-
-FormaPagamento (string)
-
-Validações: não permite nomes ou anos inválidos.
-
-Construtor: encapsulamento aplicado.
-
-2. Membros
-
+## 2. Classe Membros
 Representa cada membro da ludoteca.
 
-Propriedades:
+### Propriedades:
+- `IdMem` (int)
+- `NomeMem` (string, private set)
+- `emprestimo` (bool)
+- `jogoPego` (string)
 
-IdMem (int)
+---
 
-NomeMem (string, private set)
-
-emprestimo (bool)
-
-jogoPego (string)
-
-3. Emprestar
-
+## 3. Classe Emprestar
 Controle de empréstimos e devoluções.
 
-Métodos genéricos de persistência:
+### Métodos Genéricos de Persistência:
+- `Carregar(string caminho)` // [AV1-3]
+- `Salvar(string caminho, List lista)` // [AV1-3]
 
-Carregar<T>(string caminho) // [AV1-3]
+### Funcionalidades:
+- Tratamento de exceções com comentários // [AV1-5] para try/catch
+- Lógica de limite de 2 jogos por membro
+- Cálculo de valor de devolução e forma de pagamento
 
-Salvar<T>(string caminho, List<T> lista) // [AV1-3]
+---
 
-Tratamento de exceções com comentários // [AV1-5] para try/catch.
+## 4. Classe GerarRelatorio
+Geração de relatórios de empréstimos em arquivo `relatorio.txt` // [AV2-1]
 
-Lógica de limite de 2 jogos por membro, cálculo de valor de devolução e forma de pagamento.
+### Características:
+- Persistência com `System.Text.Json`
+- Tratamento de exceções
+- Debug log de erros com marcação // [AV2-5]
 
-4. GerarRelatorio
+---
 
-Geração de relatórios de empréstimos em arquivo relatorio.txt. // [AV2-1]
-
-Persistência com System.Text.Json e tratamento de exceções.
-
-Debug log de erros com marcação // [AV2-5]
-
-5. CadastroJogo / CadastroMembros
-
+## 5. Classes CadastroJogo / CadastroMembros
 Permitem adicionar e remover jogos e membros.
 
-Salvamento e carregamento via JSON com comentários // [AV1-3].
+### Funcionalidades:
+- Salvamento e carregamento via JSON com comentários // [AV1-3]
+- Validações de entrada
+- Encapsulamento de propriedades com `private set`
 
-Validações de entrada e encapsulamento de propriedades com private set.
+---
 
-6. ListaJogos
-
+## 6. Classe ListaJogos
 Listagem completa de jogos cadastrados.
 
-Indica estado (disponível / indisponível) e a quem está emprestado.
+### Características:
+- Indica estado (disponível/indisponível)
+- Mostra a quem está emprestado
 
-Persistência
+---
 
-Todos os dados são armazenados em JSON na pasta data do projeto:
+## Persistência de Dados
+Todos os dados são armazenados em JSON na pasta `data` do projeto:
 
-biblioteca.json → jogos
+- **biblioteca.json** → jogos
+- **Membros.json** → membros  
+- **relatorio.txt** → relatório de empréstimos
 
-Membros.json → membros
+### Implementação:
+- Métodos `Salvar()` e `Carregar()` usam `System.Text.Json` com serialização indentada
+- Comentários `// [AV1-3]` indicam pontos de serialização
+- Comentários `// [AV1-5]` indicam blocos try/catch
 
-relatorio.txt → relatório de empréstimos
+---
 
-Métodos Salvar() e Carregar() usam System.Text.Json com serialização indentada.
-Comentários // [AV1-3] indicam pontos de serialização.
-Comentários // [AV1-5] indicam blocos try/catch.
-
-Menu Console
-
+## Menu Console
 O menu principal permite executar as funções mínimas:
 
+```
 === LUDOTECA .NET ===
-1 - Cadastrar jogo      // [AV1-4-Cadastrar]
-2 - Excluir Jogo        // [AV1-4-Excluir]
-3 - Cadastrar membro    // [AV1-4-Cadastrar]
-4 - Excluir membro      // [AV1-4-Excluir]
-5 - Listar jogos        // [AV1-4-Listar]
-6 - Emprestar jogo      // [AV1-4-Emprestar]
-7 - Devolver jogo       // [AV1-4-Devolver]
-8 - Gerar relatório     // [AV1-4-Relatorio]
+1 - Cadastrar jogo          // [AV1-4-Cadastrar]
+2 - Excluir Jogo           // [AV1-4-Excluir]
+3 - Cadastrar membro       // [AV1-4-Cadastrar]
+4 - Excluir membro         // [AV1-4-Excluir]
+5 - Listar jogos           // [AV1-4-Listar]
+6 - Emprestar jogo         // [AV1-4-Emprestar]
+7 - Devolver jogo          // [AV1-4-Devolver]
+8 - Gerar relatório        // [AV1-4-Relatorio]
 0 - Sair
+```
 
-Regras e Validações
+---
 
-Nome de jogo e membro não podem estar vazios.
+## Regras e Validações
 
-Ano do jogo ≥ 1950.
+### Validações de Entrada:
+- Nome de jogo e membro não podem estar vazios
+- Ano do jogo ≥ 1950
 
-Limite de 2 jogos por membro.
+### Regras de Negócio:
+- Limite de 2 jogos por membro
+- Data de devolução não pode ser anterior à data de empréstimo
 
-Data de devolução não pode ser anterior à data de empréstimo.
-
-Debug log registra pelo menos duas exceções // [AV2-5].
-
+### Debug e Logs:
+- Debug log registra pelo menos duas exceções // [AV2-5]
