@@ -97,6 +97,15 @@ Todos os dados são armazenados em JSON na pasta `data` do projeto:
 - Comentários `// [AV1-3]` indicam pontos de serialização
 - Comentários `// [AV1-5]` indicam blocos try/catch
 
+[AV1-3] linhas = 
+emprestar.cs - linha: 35
+CadastroMembros.cs - linha: 29, 46
+CadastroJogo.cs - linha: 160
+
+[AV1-5] linhas =
+GerarRelatorio.cs - linha: 27
+CadastroMembros.cs - linha: 41, 27
+
 ---
 
 ## Menu Console
@@ -121,6 +130,7 @@ O menu principal permite executar as funções mínimas:
 
 ### Validações de Entrada:
 - Nome de jogo e membro não podem estar vazios
+- Oferece validação em caso de nomes duplicados
 - Ano do jogo ≥ 1950 || ano do jogo > ano atual
 
 
@@ -130,5 +140,6 @@ O menu principal permite executar as funções mínimas:
 
 ### Debug e Logs:
 - Debug log registra pelo menos duas exceções // [AV2-5]
+
 
 
