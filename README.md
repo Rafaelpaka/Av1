@@ -1,10 +1,10 @@
 # Sistema Ludoteca .NET
 
 ## Equipe de Desenvolvimento
-- **Rafael de Alcântara**: 06010477
+- **Rafael de Alcântara Peçanha Fernandes**: 06010477
 - **Vinicius Schonfelder**: 06010595
-- **Lucas Soares**: 06011048
-- **Lohana**: 06009900
+- **Lucas Soares Francisco**: 06011048
+- **Lohana Delgado**: 06009900
 
 ## Diagrama do Sistema
 [Link para o diagrama](https://drive.google.com/file/d/1MUU0Vlw6h7DLvbSXrZoR-zlAHMT5Icm9/view?usp=sharing)
@@ -140,6 +140,7 @@ O menu principal permite executar as funções mínimas:
 
 ### Debug e Logs:
 - Debug log registra pelo menos duas exceções // [AV2-5]
+
 
 
 
