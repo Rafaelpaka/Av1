@@ -121,7 +121,8 @@ O menu principal permite executar as funções mínimas:
 
 ### Validações de Entrada:
 - Nome de jogo e membro não podem estar vazios
-- Ano do jogo ≥ 1950
+- Ano do jogo ≥ 1950 || ano do jogo > ano atual
+
 
 ### Regras de Negócio:
 - Limite de 2 jogos por membro
@@ -129,4 +130,5 @@ O menu principal permite executar as funções mínimas:
 
 ### Debug e Logs:
 - Debug log registra pelo menos duas exceções // [AV2-5]
+
 
