@@ -129,3 +129,4 @@ O menu principal permite executar as funções mínimas:
 
 ### Debug e Logs:
 - Debug log registra pelo menos duas exceções // [AV2-5]
+
