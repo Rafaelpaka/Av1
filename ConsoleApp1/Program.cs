@@ -17,7 +17,7 @@ namespace program
             {
                 
 
-                Console.WriteLine("=== LUDOTECA .NET ===");
+                Console.WriteLine("\n=== LUDOTECA .NET ===");
                 Console.WriteLine("1 Cadastrar jogo");
                 Console.WriteLine("2 Excluir Jogo");
                 Console.WriteLine("3 Cadastrar membro");
@@ -78,6 +78,7 @@ namespace program
         }
     }
 }
+
 
 
 
