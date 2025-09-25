@@ -9,6 +9,10 @@
 ## Diagrama do Sistema
 [Link para o diagrama](https://drive.google.com/file/d/1MUU0Vlw6h7DLvbSXrZoR-zlAHMT5Icm9/view?usp=sharing)
 
+##Link do Video no Youtube:
+
+[Link para o video](https://youtu.be/CXJSIICWTqQ)
+
 ---
 
 ## 1. Classe Jogo
@@ -140,6 +144,7 @@ O menu principal permite executar as funções mínimas:
 
 ### Debug e Logs:
 - Debug log registra pelo menos duas exceções // [AV2-5]
+
 
 
 
